@@ -1,0 +1,209 @@
+img{
+   width: 150px;
+   height: 150px;
+}
+header{
+   background-color: purple;
+   padding: 20px;
+   text-align: center;
+}
+footer{
+   background-color:pink;
+   padding: 10px;
+   text-align: center;
+}
+.class1{
+   color: #333;
+   font-size: 16px;
+   background-color:lightblue; ;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+h1 {
+  margin: 0 0 0.5rem;
+  color: var(--color-primary);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+p {
+  margin: 0 0 1rem;
+}
+.site-nav {
+  margin-top: 1.25rem;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  margin: 0.4rem;
+}
+
+.site-nav a {
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Center the content and give sections deliberate spacing */
+.page-content {
+  width: calc(100% - 2rem);
+  max-width: 70rem;
+  margin: 2rem auto;
+}
+
+.content-section,
+.contact-form {
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+/* Form fields get consistent spacing and sizing */
+.contact-form > div {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.3rem;
+  font: inherit;
+}
+
+.contact-form button {
+  padding: 0.7rem 1.2rem;
+  border: 0;
+  border-radius: 0.3rem;
+  background-color: var(--color-primary);
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer spacing and colour */
+.site-footer {
+  padding: 1.25rem 1rem;
+  background-color: #e5ecef;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+.site-header {
+  border-bottom: 0.25rem solid var(--color-primary);
+}
+/* PART B — Flexbox */
+
+/* Flexbox lays out the navigation links in a row.
+   It can wrap onto another line on narrow screens. */
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* The skills list also uses Flexbox to make a flexible row of items. */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  flex: 1 1 7rem;
+  padding: 0.7rem;
+  background-color: var(--color-page);
+  border: 1px solid var(--color-border);
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+/* PART C — CSS Grid */
+
+/* On small screens, put each page section in one column. */
+.page-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+/* The grid gap provides spacing, so remove the earlier bottom margins. */
+.content-section,
+.contact-form {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+/* PART D — Mobile-first responsive design */
+
+/* Keep form controls inside their container on small screens. */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  display: block;
+  min-width: 0;
+}
+
+/* Tablet: two columns for the page sections. */
+@media (min-width: 48rem) {
+  .page-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  /* Make the contact form stretch across both grid columns. */
+  .contact-form {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Desktop: use three columns for the page sections. */
+@media (min-width: 75rem) {
+  .page-content {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Keep the contact form full-width below the sections. */
+  .contact-form {
+    grid-column: 1 / -1;
+  }
+}

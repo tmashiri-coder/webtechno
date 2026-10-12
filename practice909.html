@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+  <header>
+    <h1>Tadiwa Mashiri</h1>
+    <p>Building accessible web experiences.</p>
+
+    <nav tadiwa-label="Page sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" tadiwa-mashiriby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p>
+        I’m a front-end developer focused on clean structure, semantic HTML,
+        and user-friendly interfaces.
+      </p>
+
+      <aside tadiwa-label="Highlights">
+        <h3>Highlights</h3>
+        <ul>
+          <li>Semantic HTML5 structure</li>
+          <li>Responsive layouts</li>
+          <li>Accessibility-first approach</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="projects" tadiwa-mashiriby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
+      <article>
+        <h3>Semantic Landing Page</h3>
+        <p>A simple, well-structured page using proper headings and landmarks.</p>
+      </article>
+
+      <article>
+        <h3>Responsive Portfolio Layout</h3>
+        <p>Responsive sections and accessible navigation links.</p>
+      </article>
+    </section>
+
+    <section id="contact" tadiwa-mashiriby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+      <p>Fill out the form below:</p>
+
+      <form action="/submit-contact" method="post">
+        <div>
+          <label for="full-name">Full name</label>
+          <input
+            id="full-name"
+            name="fullName"
+            type="text"
+            required
+            minlength="2"
+            maxlength="80"
+            autocomplete="name"
+          />
+        </div>
+
+        <div>
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <div>
+          <label for="phone">Phone number</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            inputmode="tel"
+            autocomplete="tel"
+            pattern="^\+?[0-9]{10,15}$"
+            placeholder="+2632826985"
+          />
+          <small>Allowed: 10–15 digits, optional leading +</small>
+        </div>
+
+        <div>
+          <label for="topic">Topic</label>
+          <input
+            id="topic"
+            name="topic"
+            type="text"
+            required
+            minlength="3"
+            maxlength="40"
+            pattern="[A-Za-z0-9][A-Za-z0-9 _-]*"
+          />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            minlength="10"
+            maxlength="1000"
+          ></textarea>
+        </div>
+
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Tadiwa Mashiri. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

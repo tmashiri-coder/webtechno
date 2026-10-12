@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My profile</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header class="site-header p-6 sm:p-8 text-center">
+        <img src="C:\Users\Tadiwa Mashiri\OneDrive\Pictures\Camera Roll\2026\01\20260106_131326727_iOS.heic" alt="Profile Image" width="200" height="200" >
+       <h1> Tadiwa Mashiri</h1>
+       <p>Computer Information Systems Student</p>
+       <nav class="site-navigation" aria-label="Main navigation">
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+        </ul>
+        </nav>
+    </header >
+    <main class="page-content">
+    <section class="content-section">
+        <h2>About Me</h2>
+        <p>I am a passionate student of Computer Information Systems, with a strong interest in web development and software engineering.</p>
+    </section>
+    <section>
+        <h2>Contact Information</h2>
+        <p>Email: tadiwa.mashiri@gmail.com</p>
+        <p>Phone: +263 77 123 4567</p>
+    </section>
+    <section>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+<form 
+class="contact-form rounded-lg bg-white p-6 shadow-md"
+action="/contact"
+method="post"
+>
+  <h2>Contact Me</h2>
+
+  <!-- Name (text) -->
+  <div>
+    <label for="name">Full name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      minlength="2"
+      maxlength="80"
+      autocomplete="name"
+    />
+  </div>
+
+  <!-- Email (email) -->
+  <div>
+    <label for="email">Email address</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      autocomplete="email"
+    />
+  </div>
+
+  <!-- Phone (tel) -->
+  <div>
+    <label for="phone">Phone number</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      required
+      pattern="^[0-9]{10}$"
+      title="Enter exactly 10 digits (numbers only)."
+      autocomplete="tel"
+    />
+  </div>
+
+  <!-- Topic (select) -->
+  <div>
+    <label for="topic">Topic</label>
+    <select id="topic" name="topic" required>
+      <option value="" selected disabled>Select a topic</option>
+      <option value="project">Project enquiry</option>
+      <option value="support">Support</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <!-- Message (textarea) -->
+  <div>
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      minlength="10"
+      maxlength="1000"
+      rows="6"
+    ></textarea>
+  </div>
+
+  <button type="submit">Send</button>
+</form>
+
+</main>
+    <footer>
+        <p>&copy; 2026 Tadiwa Mashiri. All rights reserved.</p>
+    </footer>
+</body>
+</html>
