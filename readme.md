@@ -4,7 +4,7 @@
 - [ ] Tested at 375px (mobile)
 - [ ] Tested at 768px (tablet)
 - [ ] Tested at 1280px (desktop)
-- Issues found and fixed: [describe any issues, or write "None"]
+- Issues found and fixed: ["size deffers according to the size of the window opened"]
 
 ### Layout choices
 - Flexbox: Used for [for example, the navigation or skills list] because it arranges items in a row and can wrap.
